@@ -1,0 +1,146 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Turbo Bites Theme - Red, Black, Orange, White */
+  --red: #DC2626;
+  --red-dim: #B91C1C;
+  --orange: #F97316;
+  --orange-dim: #EA580C;
+  --black: #0a0a0a;
+  --surface: #111111;
+  --surface2: #181818;
+  --white: #ffffff;
+  --text: #f0f0f0;
+  --muted: #888888;
+  --border-accent: rgba(220, 38, 38, 0.15);
+  
+  --background: #0a0a0a;
+  --foreground: #f0f0f0;
+  --card: #111111;
+  --card-foreground: #f0f0f0;
+  --popover: #111111;
+  --popover-foreground: #f0f0f0;
+  --primary: #DC2626;
+  --primary-foreground: #ffffff;
+  --secondary: #181818;
+  --secondary-foreground: #f0f0f0;
+  --muted: #181818;
+  --muted-foreground: #888888;
+  --accent: #F97316;
+  --accent-foreground: #000000;
+  --destructive: #B91C1C;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.05);
+  --input: rgba(255, 255, 255, 0.05);
+  --ring: #DC2626;
+  --radius: 0.75rem;
+}
+
+@theme inline {
+  --font-sans: var(--font-barlow), 'Barlow', system-ui, sans-serif;
+  --font-display: var(--font-bebas), 'Bebas Neue', system-ui, sans-serif;
+  --font-condensed: var(--font-barlow-condensed), 'Barlow Condensed', system-ui, sans-serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Subtle grain texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(220, 38, 38, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(220, 38, 38, 0.5);
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bump {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease;
+}
+
+.animate-bump {
+  animation: bump 0.3s ease;
+}
