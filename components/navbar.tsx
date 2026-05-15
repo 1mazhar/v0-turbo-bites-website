@@ -6,15 +6,15 @@ export function Navbar() {
   const { totalItems, openCart } = useCart()
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-[200] bg-[#080808]/95 backdrop-blur-lg border-b border-red-500/15 px-4 md:px-12 h-[68px] flex items-center justify-between">
-      <a href="#" className="font-[family-name:var(--font-bebas)] text-3xl tracking-widest text-red-500 no-underline">
-        TURBO<span className="text-white">BITES</span>
+    <nav className="fixed top-0 left-0 right-0 z-[200] bg-white/95 backdrop-blur-lg border-b border-orange-500/20 shadow-sm px-4 md:px-12 h-[68px] flex items-center justify-between">
+      <a href="#" className="font-[family-name:var(--font-bebas)] text-3xl tracking-widest text-orange-500 no-underline">
+        TURBO<span className="text-black">BITES</span>
       </a>
       
       <div className="flex items-center gap-4">
         <button
           onClick={openCart}
-          className="relative bg-red-500/10 border border-red-500/30 text-white rounded-xl px-4 py-2.5 flex items-center gap-2 font-bold text-sm tracking-wide uppercase hover:bg-red-500 hover:text-white hover:border-red-500 transition-all hover:-translate-y-0.5"
+          className="relative bg-orange-500/10 border border-orange-500/30 text-black rounded-xl px-4 py-2.5 flex items-center gap-2 font-bold text-sm tracking-wide uppercase hover:bg-orange-500 hover:text-white hover:border-orange-500 transition-all hover:-translate-y-0.5"
         >
           <svg
             width="18"

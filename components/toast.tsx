@@ -22,11 +22,11 @@ export function Toast() {
 
   return (
     <div
-      className={`fixed bottom-6 left-1/2 bg-[#181818] border border-red-500/30 text-white px-6 py-3 rounded-full font-bold text-sm z-[500] whitespace-nowrap transition-transform duration-300 ${
+      className={`fixed bottom-6 left-1/2 bg-black border border-orange-500/30 text-white px-6 py-3 rounded-full font-bold text-sm z-[500] whitespace-nowrap shadow-xl transition-transform duration-300 ${
         show ? "-translate-x-1/2 translate-y-0" : "-translate-x-1/2 translate-y-20"
       }`}
     >
-      <span className="text-red-500">{lastItem}</span> added to basket!
+      <span className="text-orange-400">{lastItem}</span> added to basket!
     </div>
   )
 }
