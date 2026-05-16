@@ -3,9 +3,10 @@
 const CATEGORIES = [
   { id: "pizza", label: "Pizza", icon: "🍕", targetIds: ["traditional-flavours-pizza", "signature-flavours-pizza", "turbo-bite-special-pizza", "square-treat-pizza", "crown-crust-pizza", "stuff-crust"] },
   { id: "burgers", label: "Burgers", icon: "🍔", targetIds: ["saucy-burger"] },
-  { id: "wraps", label: "Wraps", icon: "🌯", targetIds: ["wraps", "paratha-shawarma"] },
+  { id: "wraps", label: "Wraps", icon: "🌯", targetIds: ["wraps"] },
   { id: "fries", label: "Fries", icon: "🍟", targetIds: ["loaded-fries"] },
-  { id: "drinks", label: "Cold Drinks", icon: "🥤", targetIds: ["drinks", "mineral-water"] },
+  { id: "wings", label: "Wings", icon: "🍗", targetIds: ["wings-nuggets", "appetizer-oven-baked-wings"] },
+  { id: "paratha", label: "Paratha", icon: "🫓", targetIds: ["paratha-shawarma"] },
   { id: "pasta", label: "Pasta", icon: "🍝", targetIds: ["oven-baked-pasta"] },
 ]
 

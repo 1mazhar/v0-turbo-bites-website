@@ -19,18 +19,6 @@ export function Hero() {
           Fresh Pizza · Burgers · Shawarma · Wraps — Delivered Hot
         </p>
         
-        <div className="flex gap-3 justify-center flex-wrap">
-          <div className="bg-white border-2 border-orange-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 tracking-wide shadow-sm">
-            <span className="mr-2">🍕</span> Premium Pizzas
-          </div>
-          <div className="bg-white border-2 border-orange-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 tracking-wide shadow-sm">
-            <span className="mr-2">🍔</span> Saucy Burgers
-          </div>
-          <div className="bg-white border-2 border-orange-200 rounded-full px-5 py-2 text-sm font-semibold text-gray-700 tracking-wide shadow-sm">
-            <span className="mr-2">📱</span> Order via WhatsApp
-          </div>
-        </div>
-
         {/* Hours */}
         <div className="mt-8 inline-flex items-center gap-2 bg-white border-2 border-green-200 rounded-full px-5 py-2 shadow-sm">
           <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
